@@ -1,0 +1,193 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Smartwatch",
+      "category": "Electronics",
+      "price": 199.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1727730053198-4059d4f7e72f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A high-tech smartwatch with a touch screen and health tracking features.",
+      "brand": "Samsung"
+    },
+    {
+      "id": "2",
+      "name": "Smartphone1",
+      "category": "Electronics",
+      "price": 899,
+      "image_url": "https://plus.unsplash.com/premium_photo-1727730053198-4059d4f7e72f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A smartphone with an AMOLED display and a 48MP camera.",
+      "brand": "iPhone"
+    },
+    {
+      "id": "3",
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 1499.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1733284807748-e96f611159aa?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A laptop with an Intel i7 processor and 16GB RAM.",
+      "brand": "Dell"
+    },
+    {
+      "id": "4",
+      "name": "Bluetooth Headset",
+      "category": "Electronics",
+      "price": 79.99,
+      "image_url": "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A Bluetooth headset with noise-canceling technology.",
+      "brand": "Google"
+    },
+    {
+      "id": "5",
+      "name": "Computer Monitor",
+      "category": "Electronics",
+      "price": 299.99,
+      "image_url": "https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A 4K LED monitor with a wide viewing angle.",
+      "brand": "LG"
+    },
+    {
+      "id": "6",
+      "name": "Headphones",
+      "category": "Electronics",
+      "price": 119.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1673548916433-969e99b74543?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Wireless headphones with surround sound technology.",
+      "brand": "Sony"
+    },
+    {
+      "id": "7",
+      "name": "Digital Camera",
+      "category": "Electronics",
+      "price": 799.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1673548916457-400cca78a210?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A digital camera with a 20MP sensor and interchangeable lens.",
+      "brand": "Canon"
+    },
+    {
+      "id": "8",
+      "name": "Video Game Accessories",
+      "category": "Games",
+      "price": 49.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1679913796051-ef8c2ca138d8?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Accessories for an immersive gaming experience on PlayStation and Xbox.",
+      "brand": "Game Library"
+    },
+    {
+      "id": "9",
+      "name": "Gaming Laptop",
+      "category": "Electronics",
+      "price": 2499.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A gaming laptop with an RTX 3070 graphics card.",
+      "brand": "Acer"
+    },
+    {
+      "id": "10",
+      "name": "Electric Toothbrush",
+      "category": "Personal Care",
+      "price": 59.99,
+      "image_url": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "An electric toothbrush with innovative cleaning technology.",
+      "brand": "Philips"
+    },
+    {
+      "id": "11",
+      "name": "Portable Air Conditioner",
+      "category": "Home Appliances",
+      "price": 399.99,
+      "image_url": "https://images.unsplash.com/photo-1598240116890-4c824c684990",
+      "description": "A portable air conditioner with energy-saving technology.",
+      "brand": "Samsung"
+    },
+    {
+      "id": "12",
+      "name": "Washing Machine",
+      "category": "Home Appliances",
+      "price": 499.99,
+      "image_url": "https://images.unsplash.com/photo-1596495577885-9c3e5c4dce6e",
+      "description": "A washing machine with advanced technology for excellent cleaning results.",
+      "brand": "Bosch"
+    },
+    {
+      "id": "13",
+      "name": "Toaster",
+      "category": "Home Appliances",
+      "price": 39.99,
+      "image_url": "https://images.unsplash.com/photo-1570562386-5a3585e4623a",
+      "description": "A toaster with multiple settings and adjustable browning levels.",
+      "brand": "Philips"
+    },
+    {
+      "id": "14",
+      "name": "Coffee Machine",
+      "category": "Home Appliances",
+      "price": 129.99,
+      "image_url": "https://images.unsplash.com/photo-1603817842340-03d74c9ecb7c",
+      "description": "An automatic coffee machine with precise temperature control.",
+      "brand": "DeLonghi"
+    },
+    {
+      "id": "15",
+      "name": "Table Fan",
+      "category": "Home Appliances",
+      "price": 29.99,
+      "image_url": "https://images.unsplash.com/photo-1615274926584-b0427fe3a251",
+      "description": "A small 40W table fan.",
+      "brand": "Panasonic"
+    },
+    {
+      "id": "16",
+      "name": "Sports Wireless Headphones",
+      "category": "Electronics",
+      "price": 69.99,
+      "image_url": "https://images.unsplash.com/photo-1571173493194-86e27e99b1da",
+      "description": "Sweat-resistant wireless sports headphones with high-quality sound.",
+      "brand": "Sony"
+    },
+    {
+      "id": "17",
+      "name": "Neck Massager",
+      "category": "Personal Care",
+      "price": 49.99,
+      "image_url": "https://images.unsplash.com/photo-1593250133643-36601e3a1d3f",
+      "description": "A neck massager designed to relieve tension and pain.",
+      "brand": "Xiaomi"
+    },
+    {
+      "id": "18",
+      "name": "Face Cleaning Device",
+      "category": "Personal Care",
+      "price": 29.99,
+      "image_url": "https://images.unsplash.com/photo-1606850690309-d37277dba44b",
+      "description": "An electric face cleaning device with deep vibration technology.",
+      "brand": "Philips"
+    },
+    {
+      "id": "19",
+      "name": "Keychain",
+      "category": "Accessories",
+      "price": 15.99,
+      "image_url": "https://images.unsplash.com/photo-1604029422975-9e36fa453f5d",
+      "description": "A stylish and unique keychain.",
+      "brand": "Apple"
+    },
+    {
+      "id": "20",
+      "name": "Backpack",
+      "category": "Accessories",
+      "price": 49.99,
+      "image_url": "https://images.unsplash.com/photo-1591336142142-ea7995e6d23f",
+      "description": "A versatile backpack with additional compartments.",
+      "brand": "Nike"
+    },
+    {
+      "id": "21",
+      "name": "Mohamad Alibrahim",
+      "category": "dfsf",
+      "price": 343,
+      "image_url": "https://plus.unsplash.com/premium_photo-1733284824951-ef42ba83c8c5?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "fdfdsfdsfdsfdsfdsf",
+      "brand": "fsdfsdf"
+    }
+  ]
+}
