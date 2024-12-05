@@ -2,8 +2,10 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import apiClient from "../Services/api-client";
+import { brand } from "./brand";
+import apiProduct from "../Services/ProdcutServices";
+import { schema, schemaForm } from "./schema";
 
 interface Props {
   Edit: boolean;
@@ -11,31 +13,13 @@ interface Props {
   id: number;
 }
 
-const schema = z.object({
-  name: z.string().min(2, "Name is required").max(255, "Name is too long"),
-  category: z
-    .string()
-    .min(2, "Category is required")
-    .max(255, "Category is too long"),
-  price: z.number().min(0, "Price cannot be negative"),
-  image_url: z.string().url("Invalid URL"),
-  description: z
-    .string()
-    .min(2, "Description is required")
-    .max(255, "Description is too long"),
-  brand: z.string().min(2, "Brand is required").max(255, "Brand is too long"),
-});
-
-type schemaForm = z.infer<typeof schema>;
-
 const EditProduct = ({ Edit, setEdit, id }: Props) => {
   const [product, setProduct] = useState<schemaForm | null>(null);
 
-  // Fetch the product data by ID when the modal opens
   useEffect(() => {
     if (Edit && id) {
-      apiClient.get(`/products/${id}`).then((response) => {
-        setProduct(response.data); // Assuming the API response has the product data
+      apiProduct.getByID(id).then((response) => {
+        setProduct(response.data);
       });
     }
   }, [Edit, id]);
@@ -47,12 +31,11 @@ const EditProduct = ({ Edit, setEdit, id }: Props) => {
     formState: { errors },
   } = useForm<schemaForm>({
     resolver: zodResolver(schema),
-    defaultValues: product ?? {}, // Set default values if product is loaded
+    defaultValues: product ?? {},
   });
 
   useEffect(() => {
     if (product) {
-      // Populate the form fields with the fetched product data
       Object.keys(product).forEach((key) => {
         setValue(key as keyof schemaForm, product[key as keyof schemaForm]);
       });
@@ -61,10 +44,10 @@ const EditProduct = ({ Edit, setEdit, id }: Props) => {
 
   const onSubmit = (data: schemaForm) => {
     apiClient
-      .put(`/products/${id}`, data) // Use PUT to update the existing product
+      .put(`/products/${id}`, data)
       .then((response) => {
         console.log("Product updated:", response.data);
-        setEdit(false); // Close the dialog on successful submission
+        setEdit(false);
       })
       .catch((error) => {
         console.error("Error updating product:", error);
@@ -192,30 +175,21 @@ const EditProduct = ({ Edit, setEdit, id }: Props) => {
                   </p>
                 )}
               </div>
-
-              {/* Brand Field */}
-              <div className="mb-5">
-                <label
-                  htmlFor="brand"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Brand
-                </label>
-                <input
+              <div className="mb-5 border ">
+                <select
                   {...register("brand")}
-                  type="text"
-                  id="brand"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter brand"
-                />
+                  className="rounded w-full  focus:outline-none"
+                >
+                  {brand.map((brand) => (
+                    <option>{brand}</option>
+                  ))}
+                </select>
                 {errors.brand && (
                   <p className="text-red-500 text-xs mt-1">
                     {errors.brand.message}
                   </p>
                 )}
               </div>
-
-              {/* Submit Button */}
               <button
                 type="submit"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

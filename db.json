@@ -10,13 +10,13 @@
       "brand": "Samsung"
     },
     {
-      "id": "2",
-      "name": "Smartphone1",
+      "name": "Smartphone",
       "category": "Electronics",
       "price": 899,
       "image_url": "https://plus.unsplash.com/premium_photo-1727730053198-4059d4f7e72f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "A smartphone with an AMOLED display and a 48MP camera.",
-      "brand": "iPhone"
+      "brand": "iPhone",
+      "id": "2"
     },
     {
       "id": "3",
@@ -89,15 +89,6 @@
       "image_url": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "An electric toothbrush with innovative cleaning technology.",
       "brand": "Philips"
-    },
-    {
-      "id": "11",
-      "name": "Portable Air Conditioner",
-      "category": "Home Appliances",
-      "price": 399.99,
-      "image_url": "https://images.unsplash.com/photo-1598240116890-4c824c684990",
-      "description": "A portable air conditioner with energy-saving technology.",
-      "brand": "Samsung"
     },
     {
       "id": "12",
@@ -181,13 +172,13 @@
       "brand": "Nike"
     },
     {
-      "id": "21",
-      "name": "Mohamad Alibrahim",
-      "category": "dfsf",
-      "price": 343,
+      "id": "8850",
+      "name": "Product",
+      "category": "Product",
+      "price": 32,
       "image_url": "https://plus.unsplash.com/premium_photo-1733284824951-ef42ba83c8c5?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "fdfdsfdsfdsfdsfdsf",
-      "brand": "fsdfsdf"
+      "description": "324rfds",
+      "brand": "Apple"
     }
   ]
 }

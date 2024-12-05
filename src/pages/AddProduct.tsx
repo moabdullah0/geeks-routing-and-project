@@ -2,30 +2,14 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-import apiClient from "../Services/api-client";
+import { brand } from "./brand";
+import { schema, schemaForm } from "./schema";
+import apiProduct from "../Services/ProdcutServices";
 
 interface Props {
   add: boolean;
   setAdd: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
-const schema = z.object({
-  name: z.string().min(2, "Name is required").max(255, "Name is too long"),
-  category: z
-    .string()
-    .min(2, "Category is required")
-    .max(255, "Category is too long"),
-  price: z.number().min(0, "Price cannot be negative"),
-  image_url: z.string().url("Invalid URL"),
-  description: z
-    .string()
-    .min(2, "Description is required")
-    .max(255, "Description is too long"),
-  brand: z.string().min(2, "Brand is required").max(255, "Brand is too long"),
-});
-
-type schemaForm = z.infer<typeof schema>;
 
 const AddProduct = ({ setAdd, add }: Props) => {
   const [loading, setLoading] = useState(false);
@@ -45,7 +29,7 @@ const AddProduct = ({ setAdd, add }: Props) => {
     setSubmitError(null);
 
     try {
-      await apiClient.post("/products", data);
+      await apiProduct.postData(data);
       console.log("Form data submitted:", data);
       reset();
       setAdd(false);
@@ -186,29 +170,16 @@ const AddProduct = ({ setAdd, add }: Props) => {
                   </p>
                 )}
               </div>
-
-              {/* Brand Field */}
-              <div className="mb-5">
-                <label
-                  htmlFor="brand"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Brand
-                </label>
-                <input
+              <div className="mb-5 border ">
+                <select
                   {...register("brand")}
-                  type="text"
-                  id="brand"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter brand"
-                />
-                {errors.brand && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.brand.message}
-                  </p>
-                )}
+                  className="rounded w-full  focus:outline-none"
+                >
+                  {brand.map((brand) => (
+                    <option>{brand}</option>
+                  ))}
+                </select>
               </div>
-
               {/* Submit Button */}
               <button
                 type="submit"
